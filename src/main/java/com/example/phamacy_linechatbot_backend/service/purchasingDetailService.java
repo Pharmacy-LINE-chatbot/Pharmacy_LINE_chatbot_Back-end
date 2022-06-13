@@ -5,7 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface purchasingDetailService {
-    Integer getpurchasingDetailSize();
+    Integer getPurchasingDetailSize();
 
     Page<purchasingDetail> getEvents(Integer pageSize, Integer page);
 

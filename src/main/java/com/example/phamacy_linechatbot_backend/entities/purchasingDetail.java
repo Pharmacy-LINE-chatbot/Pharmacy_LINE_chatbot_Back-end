@@ -17,8 +17,8 @@ public class purchasingDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Exclude
     Long id;
-    String Customer_name;
+    String CustomerName;
     String Location;
-    String Option;
-    String List_of_Drug;
+    String SendingOption;
+    String ListOfDrug;
 }
