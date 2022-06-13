@@ -1,6 +1,5 @@
 package com.example.phamacy_linechatbot_backend.service;
 
-import com.example.phamacy_linechatbot_backend.DAO.drugDAO;
 import com.example.phamacy_linechatbot_backend.DAO.purchasingDetailDAO;
 import com.example.phamacy_linechatbot_backend.entities.purchasingDetail;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ public class purchasingDetailServiceImpl implements purchasingDetailService {
     purchasingDetailDAO purchasingDetailDAO;
 
     @Override
-    public Integer getpurchasingDetailSize() {
+    public Integer getPurchasingDetailSize() {
         return purchasingDetailDAO.getPurchasingDetailSize();
     }
 

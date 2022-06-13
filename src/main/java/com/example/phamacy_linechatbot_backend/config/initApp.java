@@ -28,9 +28,7 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
         d2 = drugRepository.save(drug.builder().name("d2").Description("Desc2").ShortDesc("ShortDesc2").HowToTake("HowtoTake2").build());
         d3 = drugRepository.save(drug.builder().name("d3").Description("Desc3").ShortDesc("ShortDesc3").HowToTake("HowtoTake3").build());
 
-//        purchasingDetail p1,p2,p3;
-//        p1 = purchasingDetailRepository.save(purchasingDetail.builder().Customer_name("Customer1").build());
-//        p2 = purchasingDetailRepository.save(purchasingDetail.builder().Customer_name("Customer2").build());
-//        p3 = purchasingDetailRepository.save(purchasingDetail.builder().Customer_name("Customer3").build());
+        purchasingDetail p1,p2,p3;
+        p1 = purchasingDetailRepository.save(purchasingDetail.builder().CustomerName("Customer1").SendingOption("TakeHome").Location("CM").ListOfDrug("para").build());
     }
 }

@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface purchasingDetailRepository extends JpaRepository<purchasingDetail,Long> {
     List<purchasingDetail> findAll();
-    Page<purchasingDetail> findByName(String title, Pageable pageRequest);
-    Page<purchasingDetail> findByNameContaining(String title, Pageable pageRequest);
+    Page<purchasingDetail> findByCustomerName(String title, Pageable pageRequest);
+    Page<purchasingDetail> findByCustomerNameContaining(String title, Pageable pageRequest);
 }

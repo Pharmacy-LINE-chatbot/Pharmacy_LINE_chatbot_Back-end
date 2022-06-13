@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class purchasingDetailDTO {
     Long id;
-    String Customer_name;
+    String CustomerName;
     String Location;
-    String Option;
-    String List_of_Drug;
+    String SendingOption;
+    String ListOfDrug;
 }
