@@ -19,7 +19,7 @@ public class purchasingDetailController {
     @Autowired
     purchasingDetailService purchasingDetailService;
 
-    @GetMapping("purchasinfDetails")
+    @GetMapping("purchasingDetails")
     public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false) Integer perPage
             , @RequestParam(value = "_page", required = false) Integer page, @RequestParam(value = "name", required = false) String name) {
         perPage = perPage == null ? 3 : perPage;
@@ -36,7 +36,7 @@ public class purchasingDetailController {
 
     }
 
-    @GetMapping("purchasinfDetails/{id}")
+    @GetMapping("purchasingDetails/{id}")
     public ResponseEntity<?> getEvent(@PathVariable("id") Long id) {
 
         purchasingDetail output = purchasingDetailService.getEvent(id);
@@ -47,7 +47,7 @@ public class purchasingDetailController {
         }
     }
 
-    @PostMapping("/purchasinfDetails")
+    @PostMapping("/purchasingDetails")
     public ResponseEntity<?> addEvent(@RequestBody purchasingDetail event) {
         purchasingDetail output = purchasingDetailService.save(event);
         return ResponseEntity.ok(LabMapper.INSTANCE.getPurchasingDetailDTO(output));
