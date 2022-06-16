@@ -22,7 +22,7 @@ public class drugController {
     @GetMapping("drugs")
     public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false) Integer perPage
             , @RequestParam(value = "_page", required = false) Integer page, @RequestParam(value = "name", required = false) String name) {
-        perPage = perPage == null ? 3 : perPage;
+        perPage = perPage == null ? 10 : perPage;
         page = page == null ? 1 : page;
         Page<drug> pageOutput;
         if (name == null) {
@@ -51,6 +51,14 @@ public class drugController {
     public ResponseEntity<?> addEvent(@RequestBody drug event) {
         drug output = drugService.save(event);
         return ResponseEntity.ok(LabMapper.INSTANCE.getDrugDTO(output));
+
+    }
+
+    @DeleteMapping("/drugs/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Long id) {
+        drug event = drugService.getEvent(id);
+        drugService.delete(event);
+        return ResponseEntity.ok(HttpStatus.OK);
 
     }
 
