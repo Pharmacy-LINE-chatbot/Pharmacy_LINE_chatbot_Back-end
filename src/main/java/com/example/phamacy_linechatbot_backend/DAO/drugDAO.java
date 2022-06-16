@@ -13,4 +13,6 @@ public interface drugDAO {
 
     drug save(drug event);
     Page<drug> getEvent(String name, Pageable page);
+
+    void delete(drug event);
 }

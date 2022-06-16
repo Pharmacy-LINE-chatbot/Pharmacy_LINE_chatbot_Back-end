@@ -36,4 +36,9 @@ public class drugServiceImpl implements drugService{
     public Page<drug> getEvent(String name, Pageable page) {
         return drugDAO.getEvent(name,page);
     }
+
+    @Override
+    public void delete(drug event) {
+        drugDAO.delete(event);
+    }
 }

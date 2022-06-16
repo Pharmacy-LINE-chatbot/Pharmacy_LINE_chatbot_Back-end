@@ -39,4 +39,9 @@ public class drugDAODbImpl implements drugDAO{
     public Page<drug> getEvent(String name, Pageable page) {
         return repository.findByNameContaining(name,page);
     }
+
+    @Override
+    public void delete(drug event) {
+        repository.delete(event);
+    }
 }
