@@ -54,7 +54,7 @@ public class WebSecurityConfig {
                 // don't create session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
-                .antMatchers("/auth/**",  "/refresh").permitAll()
+                .antMatchers("/auth/**",  "/refresh","/drugs").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
                 .anyRequest().authenticated();
