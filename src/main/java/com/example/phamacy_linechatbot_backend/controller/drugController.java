@@ -1,6 +1,7 @@
 package com.example.phamacy_linechatbot_backend.controller;
 
 import com.example.phamacy_linechatbot_backend.entities.drug;
+import com.example.phamacy_linechatbot_backend.repository.drugRepository;
 import com.example.phamacy_linechatbot_backend.service.drugService;
 import com.example.phamacy_linechatbot_backend.util.LabMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import org.springframework.web.server.ResponseStatusException;
 public class drugController {
     @Autowired
     drugService drugService;
+    drugRepository drugRepository;
 
     @GetMapping("drugs")
     public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false) Integer perPage
@@ -64,27 +66,31 @@ public class drugController {
 
     @PutMapping("/drugs/{id}")
     public ResponseEntity<?> updateDrug(@PathVariable(value = "id") Long id, @RequestBody drug drugDetail) {
+
         drug Drug = drugService.getEvent(id);
+        if (Drug != null) {
+            if (drugDetail.getName() == null) {
+                drugDetail.setName(Drug.getName());
+            }
+            if (drugDetail.getDescription() == null) {
+                drugDetail.setDescription(Drug.getDescription());
+            }
+            if (drugDetail.getShortDesc() == null) {
+                drugDetail.setShortDesc(Drug.getShortDesc());
+            }
+            if (drugDetail.getHowToTake() == null) {
+                drugDetail.setHowToTake(Drug.getShortDesc());
+            }
 
-        if (drugDetail.getName() == null){
-            drugDetail.setName(Drug.getName());
+            Drug.setName(drugDetail.getName());
+            Drug.setDescription(drugDetail.getDescription());
+            Drug.setShortDesc(drugDetail.getShortDesc());
+            Drug.setHowToTake(drugDetail.getHowToTake());
+            final drug updatedDrug = drugService.save(Drug);
+            return ResponseEntity.ok(updatedDrug);
+        }else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The given id is not found");
         }
-        if (drugDetail.getDescription() == null){
-            drugDetail.setDescription(Drug.getDescription());
-        }
-        if (drugDetail.getShortDesc() == null){
-            drugDetail.setShortDesc(Drug.getShortDesc());
-        }
-        if (drugDetail.getHowToTake() == null){
-            drugDetail.setHowToTake(Drug.getShortDesc());
-        }
-
-        Drug.setName(drugDetail.getName());
-        Drug.setDescription(drugDetail.getDescription());
-        Drug.setShortDesc(drugDetail.getShortDesc());
-        Drug.setHowToTake(drugDetail.getHowToTake());
-        final drug updatedDrug = drugService.save(Drug);
-        return ResponseEntity.ok(updatedDrug);
     }
 
 
