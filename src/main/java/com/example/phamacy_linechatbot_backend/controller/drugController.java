@@ -66,6 +66,19 @@ public class drugController {
     public ResponseEntity<?> updateDrug(@PathVariable(value = "id") Long id, @RequestBody drug drugDetail) {
         drug Drug = drugService.getEvent(id);
 
+        if (drugDetail.getName() == null){
+            drugDetail.setName(Drug.getName());
+        }
+        if (drugDetail.getDescription() == null){
+            drugDetail.setDescription(Drug.getDescription());
+        }
+        if (drugDetail.getShortDesc() == null){
+            drugDetail.setShortDesc(Drug.getShortDesc());
+        }
+        if (drugDetail.getHowToTake() == null){
+            drugDetail.setHowToTake(Drug.getShortDesc());
+        }
+
         Drug.setName(drugDetail.getName());
         Drug.setDescription(drugDetail.getDescription());
         Drug.setShortDesc(drugDetail.getShortDesc());
