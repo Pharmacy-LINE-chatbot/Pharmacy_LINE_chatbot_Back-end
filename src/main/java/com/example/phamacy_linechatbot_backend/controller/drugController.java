@@ -62,4 +62,16 @@ public class drugController {
 
     }
 
+    @PutMapping("/drugs/{id}")
+    public ResponseEntity<?> updateDrug(@PathVariable(value = "id") Long id, @RequestBody drug drugDetail) {
+        drug Drug = drugService.getEvent(id);
+
+        Drug.setName(drugDetail.getName());
+        Drug.setDescription(drugDetail.getDescription());
+        Drug.setShortDesc(drugDetail.getShortDesc());
+        Drug.setHowToTake(drugDetail.getHowToTake());
+        final drug updatedDrug = drugService.save(Drug);
+        return ResponseEntity.ok(updatedDrug);
+    }
+
 }
