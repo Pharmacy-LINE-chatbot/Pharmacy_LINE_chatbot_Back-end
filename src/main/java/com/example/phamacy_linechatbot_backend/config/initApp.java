@@ -39,9 +39,24 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
     public void onApplicationEvent(ApplicationReadyEvent event) {
 
         drug d1,d2,d3;
-        d1 = drugRepository.save(drug.builder().name("d1").Description("Desc1").ShortDesc("ShortDesc1").HowToTake("HowtoTake1").build());
-        d2 = drugRepository.save(drug.builder().name("d2").Description("Desc2").ShortDesc("ShortDesc2").HowToTake("HowtoTake2").build());
-        d3 = drugRepository.save(drug.builder().name("d3").Description("Desc3").ShortDesc("ShortDesc3").HowToTake("HowtoTake3").build());
+        d1 = drugRepository.save(drug.builder()
+                .name("Paracetamol").
+                Description("At a standard dose, paracetamol only slightly decreases body temperature; ").
+                ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
+                HowToTake("Ask a pharmasist")
+                .build());
+        d2 = drugRepository.save(drug.builder()
+                .name("Antipyretic")
+                .Description("An antipyretic is a substance that reduces fever.Antipyretics cause the hypothalamus to override a prostaglandin-induced increase in temperature. The body then works to lower the temperature, which results in a reduction in fever.")
+                .ShortDesc("An antipyretic is a substance that reduces fever. Antipyretics cause the hypothalamus to override a prostaglandin-induced increase in temperature. The body then works to lower the temperature, which results in a reduction in fever.")
+                .HowToTake("Ask a pharmacist")
+                .build());
+        d3 = drugRepository.save(drug.builder()
+                .name("mood stabilizer ")
+                .Description("A mood stabilizer is a psychiatric medication used to treat mood disorders characterized by intense and sustained mood shifts, such as bipolar disorder and the bipolar type of schizoaffective disorder.")
+                .ShortDesc("Mood stabilizers are best known for the treatment of bipolar disorder, preventing mood shifts to mania (or hypomania) and depression. Mood stabilizers are also used in schizoaffective disorder when it is the bipolar type.")
+                .HowToTake("Ask a pharmasist")
+                .build());
 
         purchasingDetail p1,p2,p3;
         p1 = purchasingDetailRepository.save(purchasingDetail.builder().CustomerName("Customer1").SendingOption("TakeHome").Location("CM").ListOfDrug("para").build());
