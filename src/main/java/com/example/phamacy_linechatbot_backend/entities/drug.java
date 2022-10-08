@@ -2,10 +2,7 @@ package com.example.phamacy_linechatbot_backend.entities;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Builder
@@ -18,6 +15,8 @@ public class drug {
     @EqualsAndHashCode.Exclude
     Long id;
     String name;
+
+    @Column(columnDefinition = "TEXT", length=8192)
     String Description;
     String ShortDesc;
     String HowToTake;

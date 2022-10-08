@@ -24,7 +24,7 @@ public class drugController {
     @GetMapping("drugs")
     public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false) Integer perPage
             , @RequestParam(value = "_page", required = false) Integer page, @RequestParam(value = "name", required = false) String name) {
-        perPage = perPage == null ? 10 : perPage;
+        perPage = perPage == null ? 4 : perPage;
         page = page == null ? 1 : page;
         Page<drug> pageOutput;
         if (name == null) {

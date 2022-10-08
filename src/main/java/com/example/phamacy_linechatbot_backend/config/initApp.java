@@ -38,12 +38,18 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
     @Transactional
     public void onApplicationEvent(ApplicationReadyEvent event) {
 
-        drug d1,d2,d3;
+        drug d1,d2,d3,d4,d5,d6,d7,d8;
         d1 = drugRepository.save(drug.builder()
                 .name("Paracetamol").
-                Description("At a standard dose, paracetamol only slightly decreases body temperature; ").
+                Description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sem turpis, a iaculis nibh scelerisque eu. Aliquam tellus risus, consectetur et malesuada nec, porta id ipsum. Quisque vel mauris eget nisl convallis accumsan mollis sit amet ligula. Mauris lobortis augue sit amet lectus blandit, non maximus leo iaculis. Nullam dictum massa leo, vehicula eleifend lorem consectetur non. Cras erat justo, elementum non accumsan id, fringilla in urna. Pellentesque a tortor vel nisl iaculis fermentum. Proin sed nisi ac mi blandit imperdiet id ac erat.\n" +
+                        "\n" +
+                        "Mauris vestibulum risus nec erat accumsan, eget cursus odio commodo. Nunc euismod eget enim ut porta. Vestibulum porttitor dui tortor, porta placerat diam pretium ac. Aliquam lacus purus, iaculis vel orci ac, condimentum faucibus risus. Vestibulum sit amet est sit amet nisi dapibus mattis. Mauris molestie orci vel ipsum sollicitudin efficitur. Phasellus consectetur metus erat, ac molestie ipsum fermentum vitae. Nullam rutrum nunc at maximus posuere. Vivamus tempor vel turpis a ornare. Ut ac scelerisque enim, et viverra metus. Nam auctor pretium elit, et pharetra sapien posuere ac. Nunc quis tristique risus. Vivamus sed ipsum quis metus blandit blandit et eu augue.\n" +
+                        "\n" +
+                        "Quisque vulputate finibus augue sit amet pellentesque. Vivamus eget dolor luctus, elementum nibh ut, consectetur odio. Nulla enim odio, vulputate sed auctor et, suscipit quis purus. Quisque sit amet pretium neque, vitae ultricies justo. Donec quam tellus, laoreet vitae fermentum eu, iaculis et mauris. Pellentesque lorem ipsum, tempus ut elementum nec, fringilla consequat arcu. Maecenas interdum nunc eget sem blandit, nec maximus odio commodo.\n" +
+                        "\n" +
+                        "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
                 ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
-                HowToTake("Ask a pharmasist")
+                HowToTake("Ask a pharmacist")
                 .build());
         d2 = drugRepository.save(drug.builder()
                 .name("Antipyretic")
@@ -55,9 +61,68 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
                 .name("mood stabilizer ")
                 .Description("A mood stabilizer is a psychiatric medication used to treat mood disorders characterized by intense and sustained mood shifts, such as bipolar disorder and the bipolar type of schizoaffective disorder.")
                 .ShortDesc("Mood stabilizers are best known for the treatment of bipolar disorder, preventing mood shifts to mania (or hypomania) and depression. Mood stabilizers are also used in schizoaffective disorder when it is the bipolar type.")
-                .HowToTake("Ask a pharmasist")
+                .HowToTake("Ask a pharmacist")
                 .build());
-
+        d4 = drugRepository.save(drug.builder()
+                .name("Paracetamol").
+                Description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sem turpis, a iaculis nibh scelerisque eu. Aliquam tellus risus, consectetur et malesuada nec, porta id ipsum. Quisque vel mauris eget nisl convallis accumsan mollis sit amet ligula. Mauris lobortis augue sit amet lectus blandit, non maximus leo iaculis. Nullam dictum massa leo, vehicula eleifend lorem consectetur non. Cras erat justo, elementum non accumsan id, fringilla in urna. Pellentesque a tortor vel nisl iaculis fermentum. Proin sed nisi ac mi blandit imperdiet id ac erat.\n" +
+                        "\n" +
+                        "Mauris vestibulum risus nec erat accumsan, eget cursus odio commodo. Nunc euismod eget enim ut porta. Vestibulum porttitor dui tortor, porta placerat diam pretium ac. Aliquam lacus purus, iaculis vel orci ac, condimentum faucibus risus. Vestibulum sit amet est sit amet nisi dapibus mattis. Mauris molestie orci vel ipsum sollicitudin efficitur. Phasellus consectetur metus erat, ac molestie ipsum fermentum vitae. Nullam rutrum nunc at maximus posuere. Vivamus tempor vel turpis a ornare. Ut ac scelerisque enim, et viverra metus. Nam auctor pretium elit, et pharetra sapien posuere ac. Nunc quis tristique risus. Vivamus sed ipsum quis metus blandit blandit et eu augue.\n" +
+                        "\n" +
+                        "Quisque vulputate finibus augue sit amet pellentesque. Vivamus eget dolor luctus, elementum nibh ut, consectetur odio. Nulla enim odio, vulputate sed auctor et, suscipit quis purus. Quisque sit amet pretium neque, vitae ultricies justo. Donec quam tellus, laoreet vitae fermentum eu, iaculis et mauris. Pellentesque lorem ipsum, tempus ut elementum nec, fringilla consequat arcu. Maecenas interdum nunc eget sem blandit, nec maximus odio commodo.\n" +
+                        "\n" +
+                        "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
+                ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
+                HowToTake("Ask a pharmacist")
+                .build());
+        d5 = drugRepository.save(drug.builder()
+                .name("Paracetamol").
+                Description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sem turpis, a iaculis nibh scelerisque eu. Aliquam tellus risus, consectetur et malesuada nec, porta id ipsum. Quisque vel mauris eget nisl convallis accumsan mollis sit amet ligula. Mauris lobortis augue sit amet lectus blandit, non maximus leo iaculis. Nullam dictum massa leo, vehicula eleifend lorem consectetur non. Cras erat justo, elementum non accumsan id, fringilla in urna. Pellentesque a tortor vel nisl iaculis fermentum. Proin sed nisi ac mi blandit imperdiet id ac erat.\n" +
+                        "\n" +
+                        "Mauris vestibulum risus nec erat accumsan, eget cursus odio commodo. Nunc euismod eget enim ut porta. Vestibulum porttitor dui tortor, porta placerat diam pretium ac. Aliquam lacus purus, iaculis vel orci ac, condimentum faucibus risus. Vestibulum sit amet est sit amet nisi dapibus mattis. Mauris molestie orci vel ipsum sollicitudin efficitur. Phasellus consectetur metus erat, ac molestie ipsum fermentum vitae. Nullam rutrum nunc at maximus posuere. Vivamus tempor vel turpis a ornare. Ut ac scelerisque enim, et viverra metus. Nam auctor pretium elit, et pharetra sapien posuere ac. Nunc quis tristique risus. Vivamus sed ipsum quis metus blandit blandit et eu augue.\n" +
+                        "\n" +
+                        "Quisque vulputate finibus augue sit amet pellentesque. Vivamus eget dolor luctus, elementum nibh ut, consectetur odio. Nulla enim odio, vulputate sed auctor et, suscipit quis purus. Quisque sit amet pretium neque, vitae ultricies justo. Donec quam tellus, laoreet vitae fermentum eu, iaculis et mauris. Pellentesque lorem ipsum, tempus ut elementum nec, fringilla consequat arcu. Maecenas interdum nunc eget sem blandit, nec maximus odio commodo.\n" +
+                        "\n" +
+                        "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
+                ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
+                HowToTake("Ask a pharmacist")
+                .build());
+        d6 = drugRepository.save(drug.builder()
+                .name("Paracetamol").
+                Description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sem turpis, a iaculis nibh scelerisque eu. Aliquam tellus risus, consectetur et malesuada nec, porta id ipsum. Quisque vel mauris eget nisl convallis accumsan mollis sit amet ligula. Mauris lobortis augue sit amet lectus blandit, non maximus leo iaculis. Nullam dictum massa leo, vehicula eleifend lorem consectetur non. Cras erat justo, elementum non accumsan id, fringilla in urna. Pellentesque a tortor vel nisl iaculis fermentum. Proin sed nisi ac mi blandit imperdiet id ac erat.\n" +
+                        "\n" +
+                        "Mauris vestibulum risus nec erat accumsan, eget cursus odio commodo. Nunc euismod eget enim ut porta. Vestibulum porttitor dui tortor, porta placerat diam pretium ac. Aliquam lacus purus, iaculis vel orci ac, condimentum faucibus risus. Vestibulum sit amet est sit amet nisi dapibus mattis. Mauris molestie orci vel ipsum sollicitudin efficitur. Phasellus consectetur metus erat, ac molestie ipsum fermentum vitae. Nullam rutrum nunc at maximus posuere. Vivamus tempor vel turpis a ornare. Ut ac scelerisque enim, et viverra metus. Nam auctor pretium elit, et pharetra sapien posuere ac. Nunc quis tristique risus. Vivamus sed ipsum quis metus blandit blandit et eu augue.\n" +
+                        "\n" +
+                        "Quisque vulputate finibus augue sit amet pellentesque. Vivamus eget dolor luctus, elementum nibh ut, consectetur odio. Nulla enim odio, vulputate sed auctor et, suscipit quis purus. Quisque sit amet pretium neque, vitae ultricies justo. Donec quam tellus, laoreet vitae fermentum eu, iaculis et mauris. Pellentesque lorem ipsum, tempus ut elementum nec, fringilla consequat arcu. Maecenas interdum nunc eget sem blandit, nec maximus odio commodo.\n" +
+                        "\n" +
+                        "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
+                ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
+                HowToTake("Ask a pharmacist")
+                .build());
+        d7 = drugRepository.save(drug.builder()
+                .name("Paracetamol").
+                Description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sem turpis, a iaculis nibh scelerisque eu. Aliquam tellus risus, consectetur et malesuada nec, porta id ipsum. Quisque vel mauris eget nisl convallis accumsan mollis sit amet ligula. Mauris lobortis augue sit amet lectus blandit, non maximus leo iaculis. Nullam dictum massa leo, vehicula eleifend lorem consectetur non. Cras erat justo, elementum non accumsan id, fringilla in urna. Pellentesque a tortor vel nisl iaculis fermentum. Proin sed nisi ac mi blandit imperdiet id ac erat.\n" +
+                        "\n" +
+                        "Mauris vestibulum risus nec erat accumsan, eget cursus odio commodo. Nunc euismod eget enim ut porta. Vestibulum porttitor dui tortor, porta placerat diam pretium ac. Aliquam lacus purus, iaculis vel orci ac, condimentum faucibus risus. Vestibulum sit amet est sit amet nisi dapibus mattis. Mauris molestie orci vel ipsum sollicitudin efficitur. Phasellus consectetur metus erat, ac molestie ipsum fermentum vitae. Nullam rutrum nunc at maximus posuere. Vivamus tempor vel turpis a ornare. Ut ac scelerisque enim, et viverra metus. Nam auctor pretium elit, et pharetra sapien posuere ac. Nunc quis tristique risus. Vivamus sed ipsum quis metus blandit blandit et eu augue.\n" +
+                        "\n" +
+                        "Quisque vulputate finibus augue sit amet pellentesque. Vivamus eget dolor luctus, elementum nibh ut, consectetur odio. Nulla enim odio, vulputate sed auctor et, suscipit quis purus. Quisque sit amet pretium neque, vitae ultricies justo. Donec quam tellus, laoreet vitae fermentum eu, iaculis et mauris. Pellentesque lorem ipsum, tempus ut elementum nec, fringilla consequat arcu. Maecenas interdum nunc eget sem blandit, nec maximus odio commodo.\n" +
+                        "\n" +
+                        "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
+                ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
+                HowToTake("Ask a pharmacist")
+                .build());
+        d8 = drugRepository.save(drug.builder()
+                .name("Paracetamol").
+                Description("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum sem turpis, a iaculis nibh scelerisque eu. Aliquam tellus risus, consectetur et malesuada nec, porta id ipsum. Quisque vel mauris eget nisl convallis accumsan mollis sit amet ligula. Mauris lobortis augue sit amet lectus blandit, non maximus leo iaculis. Nullam dictum massa leo, vehicula eleifend lorem consectetur non. Cras erat justo, elementum non accumsan id, fringilla in urna. Pellentesque a tortor vel nisl iaculis fermentum. Proin sed nisi ac mi blandit imperdiet id ac erat.\n" +
+                        "\n" +
+                        "Mauris vestibulum risus nec erat accumsan, eget cursus odio commodo. Nunc euismod eget enim ut porta. Vestibulum porttitor dui tortor, porta placerat diam pretium ac. Aliquam lacus purus, iaculis vel orci ac, condimentum faucibus risus. Vestibulum sit amet est sit amet nisi dapibus mattis. Mauris molestie orci vel ipsum sollicitudin efficitur. Phasellus consectetur metus erat, ac molestie ipsum fermentum vitae. Nullam rutrum nunc at maximus posuere. Vivamus tempor vel turpis a ornare. Ut ac scelerisque enim, et viverra metus. Nam auctor pretium elit, et pharetra sapien posuere ac. Nunc quis tristique risus. Vivamus sed ipsum quis metus blandit blandit et eu augue.\n" +
+                        "\n" +
+                        "Quisque vulputate finibus augue sit amet pellentesque. Vivamus eget dolor luctus, elementum nibh ut, consectetur odio. Nulla enim odio, vulputate sed auctor et, suscipit quis purus. Quisque sit amet pretium neque, vitae ultricies justo. Donec quam tellus, laoreet vitae fermentum eu, iaculis et mauris. Pellentesque lorem ipsum, tempus ut elementum nec, fringilla consequat arcu. Maecenas interdum nunc eget sem blandit, nec maximus odio commodo.\n" +
+                        "\n" +
+                        "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
+                ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
+                HowToTake("Ask a pharmacist")
+                .build());
         purchasingDetail p1,p2,p3;
         p1 = purchasingDetailRepository.save(purchasingDetail.builder().CustomerName("Customer1").SendingOption("TakeHome").Location("CM").ListOfDrug("para").build());
 
