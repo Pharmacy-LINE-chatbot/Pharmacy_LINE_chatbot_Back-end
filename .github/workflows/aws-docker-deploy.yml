@@ -46,7 +46,7 @@ jobs:
         name: prepare the docker-compose run
         run: |
           mkdir phamacy_linebot_backend
-          cp docker-compose-prod.yml Phamacy_LINEChatBot_Backend/docker-compose.yml
+          cp docker-compose-prod.yml docker-compose.yml
           cd Phamacy_LINEChatBot_Backend
           docker-compose -H ${{ secrets.HOST_SERVER }} down
           docker-compose -H ${{ secrets.HOST_SERVER }} pull
