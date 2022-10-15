@@ -20,4 +20,5 @@ public class drug {
     String Description;
     String ShortDesc;
     String HowToTake;
+    String imgUrl;
 }

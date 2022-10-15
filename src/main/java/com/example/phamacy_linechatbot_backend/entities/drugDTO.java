@@ -15,4 +15,5 @@ public class drugDTO {
     String Description;
     String ShortDesc;
     String HowToTake;
+    String imgUrl;
 }
