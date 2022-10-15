@@ -6,5 +6,4 @@ services:
       - 8999:8080
     environment:
       - JAVA_PROFILE=db
-    depends_on:
-      - db
+
