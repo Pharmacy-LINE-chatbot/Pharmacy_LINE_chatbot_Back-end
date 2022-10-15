@@ -9,4 +9,4 @@ COPY ${DEPENDENCY}/META-INF /app/META-INF
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
 
 ENTRYPOINT ["java" ,   "-Dspring.profiles.active=${JAVA_PROFILE}",\
-           "-cp","app:app/lib/*","src/main/java/com/example/phamacy_linechatbot_backend/PhamacyLineChatBotBackendApplication.java"]
+           "-cp","app:app/lib/*","com.example.phamacy_linechatbot_backend.PhamacyLineChatBotBackendApplication"]
