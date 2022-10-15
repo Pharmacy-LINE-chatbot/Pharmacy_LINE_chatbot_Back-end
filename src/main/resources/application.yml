@@ -10,6 +10,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+    multipart:
+      max-file-size: 5MB
 jwt:
   header: Authorization
   secret: mySecret

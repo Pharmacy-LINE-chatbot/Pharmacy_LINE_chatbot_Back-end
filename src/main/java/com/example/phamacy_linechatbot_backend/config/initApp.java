@@ -50,18 +50,21 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
                         "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
                 ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
                 HowToTake("Ask a pharmacist")
+                .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20140752518-VTube%20Studio%207_14_2022%209_23_43%20PM%20copy.png?generation=1665817673373337&alt=media")
                 .build());
         d2 = drugRepository.save(drug.builder()
                 .name("Antipyretic")
                 .Description("An antipyretic is a substance that reduces fever.Antipyretics cause the hypothalamus to override a prostaglandin-induced increase in temperature. The body then works to lower the temperature, which results in a reduction in fever.")
                 .ShortDesc("An antipyretic is a substance that reduces fever. Antipyretics cause the hypothalamus to override a prostaglandin-induced increase in temperature. The body then works to lower the temperature, which results in a reduction in fever.")
                 .HowToTake("Ask a pharmacist")
+                        .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20142934745-FZahJfLakAAptfi.jpg?generation=1665818974600049&alt=media")
                 .build());
         d3 = drugRepository.save(drug.builder()
                 .name("mood stabilizer ")
                 .Description("A mood stabilizer is a psychiatric medication used to treat mood disorders characterized by intense and sustained mood shifts, such as bipolar disorder and the bipolar type of schizoaffective disorder.")
                 .ShortDesc("Mood stabilizers are best known for the treatment of bipolar disorder, preventing mood shifts to mania (or hypomania) and depression. Mood stabilizers are also used in schizoaffective disorder when it is the bipolar type.")
                 .HowToTake("Ask a pharmacist")
+                        .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20143213924-tumblr_af5028cbb9383b8fdb8839bf7a87e9e6_4c8c5b2d_1280.png?generation=1665819133782112&alt=media")
                 .build());
         d4 = drugRepository.save(drug.builder()
                 .name("Paracetamol").
@@ -74,6 +77,7 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
                         "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
                 ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
                 HowToTake("Ask a pharmacist")
+                        .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20143039311-tumblr_86673b152c3fb6b15a20a57fe0384872_7bc8861f_2048.jpg?generation=1665819038900694&alt=media")
                 .build());
         d5 = drugRepository.save(drug.builder()
                 .name("Paracetamol").
@@ -86,6 +90,7 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
                         "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
                 ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
                 HowToTake("Ask a pharmacist")
+                        .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20143114762-tumblr_8d42e1935547e3fd5d278395e932fe4c_16b7464e_2048%20copy.jpg?generation=1665819074507872&alt=media")
                 .build());
         d6 = drugRepository.save(drug.builder()
                 .name("Paracetamol").
@@ -98,6 +103,7 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
                         "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
                 ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
                 HowToTake("Ask a pharmacist")
+                .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20143114762-tumblr_8d42e1935547e3fd5d278395e932fe4c_16b7464e_2048%20copy.jpg?generation=1665819074507872&alt=media")
                 .build());
         d7 = drugRepository.save(drug.builder()
                 .name("Paracetamol").
@@ -110,6 +116,7 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
                         "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
                 ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
                 HowToTake("Ask a pharmacist")
+                .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20143039311-tumblr_86673b152c3fb6b15a20a57fe0384872_7bc8861f_2048.jpg?generation=1665819038900694&alt=media")
                 .build());
         d8 = drugRepository.save(drug.builder()
                 .name("Paracetamol").
@@ -122,6 +129,7 @@ public class initApp implements ApplicationListener<ApplicationReadyEvent> {
                         "Sed vel ullamcorper magna, eget facilisis odio. Duis vestibulum, tellus quis faucibus gravida, leo nisl dictum magna, at suscipit eros purus non nulla. Donec faucibus arcu at eros egestas, nec ultricies felis tristique. In hac habitasse platea dictumst. Donec quis tortor ligula. Duis auctor tincidunt augue a scelerisque. Curabitur dictum nibh id nisl dignissim suscipit. Donec sit amet porttitor felis. Integer sit amet magna vel lectus consequat euismod. Vivamus sed fringilla mauris, sed lobortis risus.").
                 ShortDesc("Paracetamol, also known as acetaminophen, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol.").
                 HowToTake("Ask a pharmacist")
+                .imgUrl("https://storage.googleapis.com/download/storage/v1/b/image-uploader-e2ddb.appspot.com/o/2022-10-15%20143039311-tumblr_86673b152c3fb6b15a20a57fe0384872_7bc8861f_2048.jpg?generation=1665819038900694&alt=media")
                 .build());
         purchasingDetail p1,p2,p3;
         p1 = purchasingDetailRepository.save(purchasingDetail.builder().CustomerName("Customer1").SendingOption("TakeHome").Location("CM").ListOfDrug("para").build());
