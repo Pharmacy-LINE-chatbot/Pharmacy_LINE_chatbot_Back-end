@@ -26,20 +26,6 @@ public class PhamacyLineChatBotBackendApplication {
 
     public static void main(String[] args) throws IOException {
 
-//        ClassLoader classLoader = PhamacyLineChatBotBackendApplication.class.getClassLoader();
-//        File file = new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getFile());
-//        FileInputStream serviceAccount = new FileInputStream(file.getAbsolutePath());
-
-//        FileInputStream serviceAccount =
-//                new FileInputStream("src/main/resources/ServiceAccountKey.json");
-//
-//        FirebaseOptions options = new FirebaseOptions.Builder()
-//                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-//                .setDatabaseUrl("https://phamacy-linebot-project-default-rtdb.asia-southeast1.firebasedatabase.app")
-//                .build();
-//
-//        if(FirebaseApp.getApps().isEmpty()) { FirebaseApp.initializeApp(options); } else { FirebaseApp.getInstance() ;}
-
         SpringApplication.run(PhamacyLineChatBotBackendApplication.class, args);
 
     }
@@ -52,7 +38,7 @@ public class PhamacyLineChatBotBackendApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:8081","http://172.20.10.2:8081/","https://phamacy-linebot-project.web.app").
+                        .allowedOrigins("http://localhost:8081","http://172.20.10.2:8081/","https://phamacy-linebot-project.web.app","http://52.230.104.188:8001/").
                         allowedMethods("PUT", "DELETE",
                                 "GET", "POST")
 
