@@ -41,7 +41,7 @@ public class PhamacyLineChatBotBackendApplication {
                         .allowedOrigins("http://localhost:8081",
                                 "http://172.20.10.2:8081/",
                                 "https://phamacy-linebot-project.web.app",
-                        "http://localhost:8081",
+                        "http://localhost:8080",
                                 "http://52.230.104.188:8001/").
                         allowedMethods("PUT", "DELETE",
                                 "GET", "POST")
